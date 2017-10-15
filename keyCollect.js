@@ -18,6 +18,7 @@ function igfCollectKeys(){
     var ownedGames = [];
     var ownedCount = 0;
     var newCount = 0;
+	var keysToActivate = "";
 	
     GM_xmlhttpRequest({
         method: "GET",
@@ -76,14 +77,22 @@ function igfCollectKeys(){
 			
 			for (var i = 0; i < newGames.length; i++) {
 				createTableRow(newGames[i].key, newGames[i].name, table1);
+				keysToActivate += newGames[i].key + "%0A";
 			}
 			for (var i = 0; i < ownedGames.length; i++) {
 				createTableRow(ownedGames[i].key, ownedGames[i].name, table2);
 			}
-			
+
 			$("#this_your_gift").prepend(table1);
 			$("#this_your_gift").prepend(table2);
 			$("#this_your_gift").prepend(table0);
+			
+			if (keysToActivate != "")
+			{
+				keysToActivate = keysToActivate.substring(0, keysToActivate.length - 3);
+				$("#newGameTable").append("<a target=\'blank\' href=\'https://store.steampowered.com/account/registerkey?key=" + keysToActivate + "\'><input type=\'button\' class=\'button\' value=\'Activate new keys\'></a>");
+			}
+			
 			$("#newGameTable").css('background-color','lightgreen');
 			$("#ownedGameTable").css('background-color','white');
 		}});
