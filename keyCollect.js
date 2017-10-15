@@ -51,20 +51,14 @@ function igfCollectKeys(){
 				}
 			}
 			);
-			console.log(newGames);
-			console.log(ownedGames);
 			
 			function createTableRow(name, key, table){
 				var tr = document.createElement('tr');
-				
 				tr.appendChild( document.createElement('td') );
 				tr.appendChild( document.createElement('td') );
-				
 				tr.cells[0].appendChild( document.createTextNode(name) );
 				tr.cells[1].appendChild( document.createTextNode(key) );
-				
 				table.appendChild(tr);
-				
 			}
 			
 			$("#newGameTable").remove();
