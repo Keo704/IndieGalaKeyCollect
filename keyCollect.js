@@ -51,15 +51,7 @@ function igfCollectKeys(){
 				}
 			}
 			);
-			
-			function createTableRow(name, key, table){
-				var tr = document.createElement('tr');
-				tr.appendChild( document.createElement('td') );
-				tr.appendChild( document.createElement('td') );
-				tr.cells[0].appendChild( document.createTextNode(name) );
-				tr.cells[1].appendChild( document.createTextNode(key) );
-				table.appendChild(tr);
-			}
+		
 			
 			$("#newGameTable").remove();
 			$("#ownedGameTable").remove();
@@ -97,6 +89,14 @@ function igfCollectKeys(){
 		}});
 }
 
+		function createTableRow(name, key, table){
+				var tr = document.createElement('tr');
+				tr.appendChild( document.createElement('td') );
+				tr.appendChild( document.createElement('td') );
+				tr.cells[0].appendChild( document.createTextNode(name) );
+				tr.cells[1].appendChild( document.createTextNode(key) );
+				table.appendChild(tr);
+			}
 
 
 $(".title_box_gift").append("<input type='button' class='button export-keys' value='Collect Keys'>");
