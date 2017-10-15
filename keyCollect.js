@@ -6,7 +6,6 @@
 // @author       Cae
 // @match        https://www.indiegala.com/gift?gift_id=*
 // @grant        GM_xmlhttpRequest
-// @grant        unsafeWindow
 // @run-at 		 document-load
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // ==/UserScript==
