@@ -63,7 +63,7 @@ function igfCollectKeys(){
 			
 			table2 = document.createElement('table');
 			table2.setAttribute("id", "ownedGameTable");
-			createTableRow("bundle name", window.location.href, table0);
+			createTableRow(window.location.href, "INDIE GALA ",  table0);
 			
 			
 			for (var i = 0; i < newGames.length; i++) {
@@ -81,7 +81,7 @@ function igfCollectKeys(){
 			if (keysToActivate != "")
 			{
 				keysToActivate = keysToActivate.substring(0, keysToActivate.length - 3);
-				$("#newGameTable").append("<a target=\'blank\' href=\'https://store.steampowered.com/account/registerkey?key=" + keysToActivate + "\'><input type=\'button\' class=\'button\' value=\'Activate new keys\'></a>");
+				$("#newGameTable").append("<a target=\'_blank\' href=\'https://store.steampowered.com/account/registerkey?key=" + keysToActivate + "\'><input type=\'button\' class=\'button\' value=\'Activate new keys\'></a>");
 			}
 			
 			$("#newGameTable").css('background-color','lightgreen');
