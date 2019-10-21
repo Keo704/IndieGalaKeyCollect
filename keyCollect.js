@@ -22,7 +22,7 @@ function igfCollectKeys(){
     GM_xmlhttpRequest({
         method: "GET",
         url: url,
-        timeout: 5000,
+        timeout: 8000,
         onload: function(response) {
 			json = JSON.parse(response.responseText);
 			ownedApps = json.rgOwnedApps;
